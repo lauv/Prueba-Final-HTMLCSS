@@ -1,0 +1,114 @@
+<!-- 1. Que sea responsive
+3. El uso de diferentes position (debe haber por lo menos uno de cada tipo)
+	Static
+	Fixed
+	Absolute
+	Relative
+4. El uso de float (debe estar utilizado correctamente en alguna sección del sitio)
+5. El uso de texto sobre imágenes de fondo
+6. El uso correcto de etiquetas semánticas
+7. Se descontará puntos por utilizar CSS Inline
+8. Se descontará puntos por etiquetas de HTML no cerradas
+9. Importante No se evaluará el resultado estético
+10. Se descontará puntos por falta de contenido
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style>
+		body{
+			margin: 0;
+		}
+		* {
+			box-sizing: border-box;
+			}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+			}
+		[class*="col-"] {float: left; padding: 15px;}
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+	
+		.Cabecera{
+			background-color: black;
+			text-align: right;
+			height: 200px;
+			position: relative;
+		}
+		
+		.banner{
+			height: 70%;
+			padding-right: 5%;
+		}
+		.texto{
+			text-align: left;
+			color:  white;			
+			position: absolute;
+			top: 0;
+			padding-left: 10%;
+			text-align: center;
+		}
+
+		.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			}
+		.menu li {
+			padding: 5%;
+			margin-bottom: 2%;
+			background-color: #33b5e5;
+			color: #ffffff;
+			}
+		.menu li:hover {
+			background-color: #0099cc;
+			}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="Cabecera">
+			<img src="http://www.en1mes.com/assets/logo-79cc18afeb892865eb97c6b6641f7dc5.png" class="banner" alt="">
+			<div class="texto">
+				<h1>Taller de GROWTH HACKING</h1>
+				<h3>Aprende hacer más con menos</h3>
+			</div>
+		</div>
+	</header>
+
+	<div class="row">
+
+		<div class="col-3 menu">
+			<ul>
+				<li>Inscríbete</li>
+				<li>Empresas que nos apoyan	</li>
+				<li>Hacker a cargo</li>
+			</ul>
+		</div>
+		<div class="col-9">
+			<h3>¿Aburrido de hacer campañas de Marketing poco exitosas?</h3>
+			<p>Pon creatividad en tu negocio y con poco dinero empieza a multiplicar tus ingresos. Aprende como trabajar con PNL en tu negocio y hacer hacks para conseguir más clientes.</p>
+		</div>
+	</div>
+
+	<footer>
+		
+	</footer>
+</body>
+</html>
